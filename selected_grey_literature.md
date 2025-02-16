@@ -2,7 +2,6 @@
 
 *Columns: Title, Year, Publisher, Url, Abstract, Author, Type*
 
-statistics:
 ![image](https://github.com/user-attachments/assets/573c7a58-33ee-4320-a9da-db683f6f8267)
 
 
