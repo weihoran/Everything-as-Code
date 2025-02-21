@@ -1,6 +1,6 @@
 # Scientifc Literature Selected for Everything as Code (EaC)
 
-**References**
+## References
 
 [S1] M. Chiari et al., “DOML: A new modeling approach to Infrastructure-as-Code,” *Information Systems*, vol. 125, p. 102422, Nov. 2024, doi: 10.1016/j.is.2024.102422.
 
