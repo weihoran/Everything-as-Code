@@ -1,4 +1,4 @@
-#Grey Literature Documents Selected for Studying the Everything as Code (EaC) Practice**
+# Grey Literature Documents Selected for Studying the Everything as Code (EaC) Practice**
 
 **Columns: Title, Year, Publisher, Url, Abstract, Author, Type**
 
