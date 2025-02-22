@@ -2,11 +2,12 @@
 
 ## References
 
-[S1] M. Chiari et al., “DOML: A new modeling approach to Infrastructure-as-Code,” *Information Systems*, vol. 125, p. 102422, Nov. 2024, doi: 10.1016/j.is.2024.102422.
 
-[S2] M. Begoug, N. Bessghaier, A. Ouni, E. A. AlOmar, and M. W. Mkaouer, “What Do Infrastructure-as-Code Practitioners Discuss: An Empirical Study on Stack Overflow,” in *2023 ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM)*, Oct. 2023, pp. 1–12. doi: 10.1109/ESEM56168.2023.10304847.
+[S1] M. Begoug, N. Bessghaier, A. Ouni, E. A. AlOmar, and M. W. Mkaouer, “What Do Infrastructure-as-Code Practitioners Discuss: An Empirical Study on Stack Overflow,” in *2023 ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM)*, Oct. 2023, pp. 1–12. doi: 10.1109/ESEM56168.2023.10304847.
 
-[S3] “A systematic mapping study of infrastructure as code research,” *Information and Software Technology*, vol. 108, pp. 65–77, Apr. 2019, doi: 10.1016/j.infsof.2018.12.004.
+[S2] “A systematic mapping study of infrastructure as code research,” *Information and Software Technology*, vol. 108, pp. 65–77, Apr. 2019, doi: 10.1016/j.infsof.2018.12.004.
+
+[S3] “The do’s and don’ts of infrastructure code: A systematic gray literature review,” *Information and Software Technology*, vol. 137, p. 106593, Sep. 2021, doi: 10.1016/j.infsof.2021.106593.
 
 [S4] M. Artac, T. Borovssak, E. Di Nitto, M. Guerriero, and D. A. Tamburri, “DevOps: Introducing Infrastructure-as-Code,” in *2017 IEEE/ACM 39th International Conference on Software Engineering Companion (ICSE-C)*, May 2017, pp. 497–498. doi: 10.1109/ICSE-C.2017.162.
 
@@ -30,7 +31,7 @@
 
 [S14] S. Kwon, S. Lee, T. Kim, D. Ryu, and J. Baik, “Exploring LLM-Based Automated Repairing of Ansible Script in Edge-Cloud Infrastructures,” *Journal of Web Engineering*, vol. 22, no. 6, pp. 889–912, Sep. 2023, doi: 10.13052/jwe1540-9589.2263.
 
-[S15] “The do’s and don’ts of infrastructure code: A systematic gray literature review,” *Information and Software Technology*, vol. 137, p. 106593, Sep. 2021, doi: 10.1016/j.infsof.2021.106593.
+[S15] M. Chiari et al., “DOML: A new modeling approach to Infrastructure-as-Code,” *Information Systems*, vol. 125, p. 102422, Nov. 2024, doi: 10.1016/j.is.2024.102422.
 
 [S16] A. Rahman, A. Partho, P. Morrison, and L. Williams, “What questions do programmers ask about configuration as code?,” in *Proceedings of the 4th International Workshop on Rapid Continuous Software Engineering, in RCoSE ’18*. New York, NY, USA: Association for Computing Machinery, May 2018, pp. 16–22. doi: 10.1145/3194760.3194769.
 
