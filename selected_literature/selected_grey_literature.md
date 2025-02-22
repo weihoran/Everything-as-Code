@@ -60,8 +60,8 @@
 | G52 | Compliance as Code - Complete Guide                                                           | 2024 | XenonStack                                  | [https://www.xenonstack.com/blog/compliance-as-a-code/](https://www.xenonstack.com/blog/compliance-as-a-code/)                | Compliance as a Code can automatically be deployed, tested, monitored and reported. Learn more about Best Practices &#124; Benefits &#124;                              |                      | webpage         |
 | G53 | Risk and Compliance as Code                                                                    |      | Google Cloud                                | [https://cloud.google.com/solutions/risk-and-compliance-as-code](https://cloud.google.com/solutions/risk-and-compliance-as-code) | Solution to make your governance, risk, and compliance function agile and cloud‐native                                                                                   |                      | webpage         |
 | G54 | What Is Compliance as Code? Benefits, Use Cases and Tools                                      | 2021 | Contino &#124; Global Transformation Consultancy | [https://www.contino.io/insights/compliance-as-code](https://www.contino.io/insights/compliance-as-code)                     | Contino helps large, heavily‐regulated enterprises to become fast, agile and competitive                                                                                 |                      | webpage         |
-| G54 | What is Infrastructure as Code? - IaC Explained - AWS. | 2025 | Amazon Web Services |  https://aws.amazon.com/what-is/iac/ |
-| G55 | What is infrastructure as code and why is it important? | 2025 | HashiCorp |  [https://aws.amazon.com/what-is/iac/](https://www.hashicorp.com/en/resources/what-is-infrastructure-as-code) |
+| G55 | What is Infrastructure as Code? - IaC Explained - AWS. | 2025 | Amazon Web Services |  https://aws.amazon.com/what-is/iac/ |
+| G56 | What is infrastructure as code and why is it important? | 2025 | HashiCorp |  [https://aws.amazon.com/what-is/iac/](https://www.hashicorp.com/en/resources/what-is-infrastructure-as-code) |
 
 
 
@@ -69,32 +69,60 @@
 ## Supplementary documents
 
 [G57] J. Riggins, "Is Storage-as-Code the Next Step in DevOps?," The New Stack. Accessed: Feb. 22, 2025. [Online]. Available: https://thenewstack.io/is-storage-as-code-the-next-step-in-devops/
+
 [G58] "What Does 'Network as Code' Mean? - Cisco Blogs." Accessed: Feb. 22, 2025. [Online]. Available: https://blogs.cisco.com/developer/what-does-network-as-code-mean
+
 [G59] M. Digital, "Platform as code: Reference architectures to simplify developer platforms," McKinsey Digital Insights. Accessed: Feb. 22, 2025. [Online]. Available: https://medium.com/digital-mckinsey/platform-as-code-reference-architectures-to-simplify-developer-platforms-f2fb48e0c874
+
 [G60] "Infrastructure as code vs. platform as code," devmio - Software Know-How. Accessed: Feb. 22, 2025. [Online]. Available: https://devm.io/devops/infrastructure-as-code-platform-170465
+
 [G61] "Environment as Code: Revolutionize Your DevOps," Bunnyshell. Accessed: Feb. 22, 2025. [Online]. Available: https://www.bunnyshell.com/blog/what-is-environment-as-code-eaac/
+
 [G62] "Environment-as-Code: Why DevOps principles should be applied to your entire IT environment." Accessed: Feb. 22, 2025. [Online]. Available: https://cloudsoft.io/blog/environment-as-code
+
 [G63] E. Evantal, "How We Evolved from IaC to Environments as Code," The New Stack. Accessed: Feb. 22, 2025. [Online]. Available: https://thenewstack.io/how-we-evolved-from-iac-to-environments-as-code/
+
 [G64] S. Watts, "What Is 'Jobs-as-Code'?," BMC Blogs. Accessed: Feb. 22, 2025. [Online]. Available: https://www.bmc.com/blogs/what-is-jobs-as-code/
+
 [G65] Jobs-as-Code, "Jobs-as-Code; its origins and its value in the world of DevOps," Medium. Accessed: Feb. 22, 2025. [Online]. Available: https://medium.com/@jobsascode/jobs-as-code-its-origins-and-its-value-in-the-world-of-devops-4de4b1e1a17f
+
 [G66] "From soup to nuts: Building a Detection-as-Code pipeline | by David French (@threatpunter) | threatpunter." Accessed: Feb. 22, 2025. [Online]. Available: https://medium.com/threatpunter/from-soup-to-nuts-building-a-detection-as-code-pipeline-28945015fc38
+
 [G67] "How We Use Datadog for Detection as Code | Datadog." Accessed: Feb. 22, 2025. [Online]. Available: https://www.datadoghq.com/blog/datadog-detection-as-code/
+
 [G68] "Privacy as code: A new taxonomy for privacy | IAPP." Accessed: Feb. 22, 2025. [Online]. Available: https://iapp.org/news/a/privacy-as-code-a-new-taxonomy-for-privacy
+
 [G69] "What is monitoring as code? | Checkly." Accessed: Feb. 22, 2025. [Online]. Available: https://www.checklyhq.com/guides/monitoring-as-code/
+
 [G70] "Monitoring as Code: What It Is and Why You Need It - The New Stack." Accessed: Feb. 22, 2025. [Online]. Available: https://thenewstack.io/monitoring-as-code-what-it-is-and-why-you-need-it/
+
 [G71] "Dashboards as code: A new approach to visualizing AWS APIs | AWS Open Source Blog." Accessed: Feb. 22, 2025. [Online]. Available: https://aws.amazon.com/blogs/opensource/dashboards-as-code-a-new-approach-to-visualizing-aws-apis/
+
 [G72] "What Is Analytics as Code? | GoodData." Accessed: Feb. 22, 2025. [Online]. Available: https://www.gooddata.com/blog/what-is-analytics-as-code/
+
 [G73] L. Hänninen, "Analytics as Code: Managing Analytics Solutions Like Any Other Software," GoodData Developers. Accessed: Feb. 22, 2025. [Online]. Available: https://medium.com/gooddata-developers/analytics-as-code-managing-analytics-solutions-like-any-other-software-504372ba6a61
+
 [G74] DataOpsZone, "Data as Code (Dac) Explained," DataOpsZone. Accessed: Feb. 22, 2025. [Online]. Available: https://www.dataopszone.com/data-as-code-dac-explained/
+
 [G75] C. Venetsanopoulos, "The Coming Era of Data as Code," The New Stack. Accessed: Feb. 22, 2025. [Online]. Available: https://thenewstack.io/the-coming-era-of-data-as-code/
+
 [G76] "Database as code: The foundation of database DevOps | Database change as code." Accessed: Feb. 22, 2025. [Online]. Available: https://www.liquibase.com/blog/database-as-code
+
 [G77] "Database as Code: Key Concepts and Definitions," DBmaestro. Accessed: Feb. 22, 2025. [Online]. Available: https://www.dbmaestro.com/glossary/database-as-code
+
 [G78] E. Onose, "Understanding Docs-as-Code," Medium. Accessed: Feb. 22, 2025. [Online]. Available: https://medium.com/@EjiroOnose/understanding-docs-as-code-01b8c7644e23
+
 [G79] "What is docs as code? All the benefits and how to get started – GitBook Blog." Accessed: Feb. 22, 2025. [Online]. Available: https://www.gitbook.com/blog/what-is-docs-as-code
+
 [G80] "Diagrams · Diagram as Code." Accessed: Feb. 22, 2025. [Online]. Available: https://diagrams.mingrammer.com/
-[G81] IcePanel, "Top 7 diagrams as code tools for software architecture," Medium. Accessed: Feb. 22, 2025. [Online]. Available: https://icepanel.medium.com/top-7-diagrams-as-code-tools-for-software-architecture-1a9dd0df1815
+
+[G81] IcePanel, "Top 7 diagrams as code tools for software architecture," Medium. Accessed: Feb. 22, 2025. [Online]. Available: https://icepanel.medium.com/top-7-diagrams-as-code-
+tools-for-software-architecture-1a9dd0df1815
+
 [G82] NoEnthusiasm4435, "Architecture as Code. What's the Point?," r/softwarearchitecture. Accessed: Feb. 22, 2025. [Online]. Available: www.reddit.com/r/softwarearchitecture/comments/1g4s81c/architecture_as_code_whats_the_point/
+
 [G83] "Project-as-Code: The Catalyst DevOps Needs | HackerNoon." Accessed: Feb. 22, 2025. [Online]. Available: https://hackernoon.com/project-as-code-the-catalyst-devops-needs-atu732wt
+
 [G84] "Orchestration as Code - RackN." Accessed: Feb. 22, 2025. [Online]. Available: https://rackn.com/orchestration/
 
 
