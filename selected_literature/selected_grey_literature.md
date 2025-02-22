@@ -60,14 +60,14 @@
 | G52 | Compliance as Code - Complete Guide                                                           | 2024 | XenonStack                                  | [https://www.xenonstack.com/blog/compliance-as-a-code/](https://www.xenonstack.com/blog/compliance-as-a-code/)                | Compliance as a Code can automatically be deployed, tested, monitored and reported. Learn more about Best Practices &#124; Benefits &#124;                              |                      | webpage         |
 | G53 | Risk and Compliance as Code                                                                    |      | Google Cloud                                | [https://cloud.google.com/solutions/risk-and-compliance-as-code](https://cloud.google.com/solutions/risk-and-compliance-as-code) | Solution to make your governance, risk, and compliance function agile and cloud‐native                                                                                   |                      | webpage         |
 | G54 | What Is Compliance as Code? Benefits, Use Cases and Tools                                      | 2021 | Contino &#124; Global Transformation Consultancy | [https://www.contino.io/insights/compliance-as-code](https://www.contino.io/insights/compliance-as-code)                     | Contino helps large, heavily‐regulated enterprises to become fast, agile and competitive                                                                                 |                      | webpage         |
+| G54 | What is Infrastructure as Code? - IaC Explained - AWS. | 2025 | Amazon Web Services |  https://aws.amazon.com/what-is/iac/ |
+| G55 | What is infrastructure as code and why is it important? | 2025 | HashiCorp |  [https://aws.amazon.com/what-is/iac/](https://www.hashicorp.com/en/resources/what-is-infrastructure-as-code) |
+
+
 
 
 ## Supplementary documents
 
-Here are the references with updated index labels [G55] through [G84]:
-
-[G55] "What is Infrastructure as Code? - IaC Explained - AWS," Amazon Web Services, Inc. Accessed: Feb. 22, 2025. [Online]. Available: https://aws.amazon.com/what-is/iac/
-[G56] HashiCorp, "What is infrastructure as code and why is it important?" Accessed: Feb. 22, 2025. [Online]. Available: https://www.hashicorp.com/en/resources/what-is-infrastructure-as-code
 [G57] J. Riggins, "Is Storage-as-Code the Next Step in DevOps?," The New Stack. Accessed: Feb. 22, 2025. [Online]. Available: https://thenewstack.io/is-storage-as-code-the-next-step-in-devops/
 [G58] "What Does 'Network as Code' Mean? - Cisco Blogs." Accessed: Feb. 22, 2025. [Online]. Available: https://blogs.cisco.com/developer/what-does-network-as-code-mean
 [G59] M. Digital, "Platform as code: Reference architectures to simplify developer platforms," McKinsey Digital Insights. Accessed: Feb. 22, 2025. [Online]. Available: https://medium.com/digital-mckinsey/platform-as-code-reference-architectures-to-simplify-developer-platforms-f2fb48e0c874
