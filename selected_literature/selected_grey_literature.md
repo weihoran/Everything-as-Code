@@ -67,6 +67,7 @@
 
 
 ## Supplementary documents
+**These documents discuss emerging "as code" practices.**
 
 [G57] J. Riggins, "Is Storage-as-Code the Next Step in DevOps?," The New Stack. Accessed: Feb. 22, 2025. [Online]. Available: https://thenewstack.io/is-storage-as-code-the-next-step-in-devops/
 
