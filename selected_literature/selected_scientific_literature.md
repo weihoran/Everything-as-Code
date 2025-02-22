@@ -78,3 +78,9 @@
 [S37] R. N. Rajapakse, M. Zahedi, M. A. Babar, and H. Shen, “Challenges and solutions when adopting DevSecOps: A systematic review,” *Information and Software Technology*, vol. 141, p. 106700, Jan. 2022, doi: 10.1016/j.infsof.2021.106700.
 
 [S38] H. Myrbakken and R. Colomo-Palacios, “DevSecOps: A Multivocal Literature Review,” in *Software Process Improvement and Capability Determination*, A. Mas, A. Mesquida, R. V. O’Connor, T. Rout, and A. Dorling, Eds., Cham: Springer International Publishing, 2017, pp. 17–29. doi: 10.1007/978-3-319-67383-7_2.
+
+[S39] T. Pusztai et al., “SLO Script: A Novel Language for Implementing Complex Cloud-Native Elasticity-Driven SLOs,” in 2021 IEEE International Conference on Web Services (ICWS), Sep. 2021, pp. 21–31. doi: 10.1109/ICWS53863.2021.00017.
+
+[S41] A. Elhabbash, A. Jumagaliyev, G. S. Blair, and Y. Elkhatib, “SLO-ML: A Language for Service Level Objective Modelling in Multi-cloud Applications,” in Proceedings of the 12th IEEE/ACM International Conference on Utility and Cloud Computing, in UCC’19. New York, NY, USA: Association for Computing Machinery, Dec. 2019, pp. 241–250. doi: 10.1145/3344341.3368805.
+
+[S42] P. Patros, K. B. Kent, and M. Dawson, “SLO request modeling, reordering and scaling,” in Proceedings of the 27th Annual International Conference on Computer Science and Software Engineering, in CASCON ’17. USA: IBM Corp., Nov. 2017, pp. 180–191.
