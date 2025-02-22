@@ -126,7 +126,9 @@ tools-for-software-architecture-1a9dd0df1815
 
 [G84] "Orchestration as Code - RackN." Accessed: Feb. 22, 2025. [Online]. Available: https://rackn.com/orchestration/
 
+[G85] “Implementing SLOs-as-Code: A Case Study - DevOps.com.” Accessed: Feb. 22, 2025. [Online]. Available: https://devops.com/implementing-slos-as-code-a-case-study/
 
+[G86] “SLIs and SLOs as code | Technology Radar,” Thoughtworks. Accessed: Feb. 22, 2025. [Online]. Available: https://www.thoughtworks.com/radar/techniques/slis-and-slos-as-code
 
 
 
