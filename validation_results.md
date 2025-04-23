@@ -1,6 +1,6 @@
 **Inter-Rater Reliability for Taxonomy Validation**
 
-| Category                                | # Items | Agreement Rate | Fleiss’ κ |
+| Criteria                                | # Items | Agreement Rate | Fleiss’ κ |
 |-----------------------------------------|--------:|---------------:|----------:|
 | Alignment with Existing Literature      |       1 |    3/3 (100%)  |     1.00  |
 | Clarity of Definitions                  |       1 |    2/3 (67%)   |     0.25  |
@@ -36,7 +36,7 @@
 
 **Inter-Rater Reliability for Conceptual Model Validation**
 
-| Category                                      | # Items | Agreement Rate | Fleiss’ κ |
+| Criteria                                      | # Items | Agreement Rate | Fleiss’ κ |
 |-----------------------------------------------|--------:|---------------:|----------:|
 | Empirical Foundation                          |       1 |    3/3 (100 %) |     1.00  |
 | Clear Representation of Relationships         |       1 |     2/3 (67 %) |     0.25  |
