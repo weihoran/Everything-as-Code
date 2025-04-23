@@ -17,7 +17,6 @@ This checklist rigorously evaluates all aspects of the taxonomy, ensuring it ali
 | **Practical Utility** | Will the taxonomy be useful for practitioners (e.g., DevOps engineers) to implement or adopt “as-code” practices? | (Yes/No/Partial) | Provide feedback on whether the taxonomy is actionable for industry professionals. |
 | **Cross-Dimensional Consistency** | Are practices placed consistently within their correct dimensions (e.g., no practice wrongly assigned between Industry Awareness and Tooling Support vs. Functional Roles)? | (Yes/No/Partial) | Flag any practices that seem out of place in the taxonomy. |
 | **Terminological Precision** | Are the terms used in the taxonomy consistent in their usage across the dimensions and categories? | (Yes/No/Partial) | Identify any inconsistencies or confusing terminology. |
-| **Expert Consensus on Categories** | Have multiple experts reviewed and agreed on the categories and relationships in the taxonomy? | (Yes/No/Partial) | State the degree of consensus among experts. |
 | **Rationale Behind Categories** | Is the reasoning behind each category and subcategory clearly justified and aligned with theoretical foundations? | (Yes/No/Partial) | Provide reasoning or sources that support the categorization choices. |
 
 ---
@@ -42,7 +41,6 @@ This checklist validates the conceptual model's accuracy, completeness, clarity,
 | **Practical Application** | Is the conceptual model useful in real-world scenarios for practitioners to understand how to integrate various "as-code" practices in a cohesive pipeline or workflow? | (Yes/No/Partial) | Provide examples of how this model can be used or improved in practice. |
 | **Scalability of the Model** | Can the conceptual model be easily adapted as new "as-code" practices emerge, or as existing practices evolve? | (Yes/No/Partial) | Suggest ways the model can be made more flexible for future additions. |
 | **Visual Clarity** | Is the model visually clear, with easy-to-understand relationships and hierarchies between practices? | (Yes/No/Partial) | Provide feedback on any visual improvements for better clarity. |
-| **Expert Consensus on Relationships** | Have domain experts agreed on the relationships, categories, and interactions represented in the model? | (Yes/No/Partial) | Report any disagreement or need for further refinement from experts. |
 | **Adaptability to Evolving Practices** | Does the model accommodate new or emerging "as-code" practices while retaining its structural integrity? | (Yes/No/Partial) | Provide suggestions for making the model more adaptable. |
 | **Interdisciplinary Relevance** | Does the model bridge gaps between software engineering, DevOps, and broader enterprise architecture practices? | (Yes/No/Partial) | Discuss any interdisciplinary insights gained or areas of improvement. |
 
