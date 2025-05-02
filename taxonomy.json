@@ -1,0 +1,206 @@
+[
+  {
+    "category": "Infrastructure Provisioning and Management",
+    "practices": [
+      {
+        "name": "Infrastructure as Code",
+        "description": "Declarative provisioning and management of infrastructure resources like compute, network, and storage using version-controlled code.",
+        "tools": ["Terraform", "Pulumi", "CloudFormation", "Ansible", "Chef", "Puppet"],
+        "level": "established"
+      },
+      {
+        "name": "Configuration as Code",
+        "description": "Automate post-provision configuration of operating systems, middleware, and applications using codified instructions.",
+        "tools": ["Ansible", "Chef", "Puppet", "SaltStack", "Helm"],
+        "level": "established"
+      },
+      {
+        "name": "Storage as Code",
+        "description": "Programmatic allocation and configuration of storage resources such as block and object storage.",
+        "tools": ["Ceph"],
+        "level": "emerging"
+      },
+      {
+        "name": "Network as Code",
+        "description": "Codified management of networking configurations including routing, firewall rules, and security groups.",
+        "tools": ["Netmiko"],
+        "level": "emerging"
+      },
+      {
+        "name": "Infrastructure Pipeline as Code",
+        "description": "Code-defined CI/CD pipelines managing the provisioning, testing, and deployment of infrastructure components.",
+        "tools": ["Terraform CI/CD", "Jenkins", "GitLab CI"],
+        "level": "established"
+      }
+    ]
+  },
+  {
+    "category": "Platform and Orchestration",
+    "practices": [
+      {
+        "name": "Platform as Code",
+        "description": "Define and provision full platform environments including runtimes and services as reusable code.",
+        "tools": ["Crossplane"],
+        "level": "emerging"
+      },
+      {
+        "name": "Environments as Code",
+        "description": "Codify multi-stage environments (development, staging, production) with infrastructure and configuration settings.",
+        "tools": ["Terraform", "Ansible"],
+        "level": "emerging"
+      },
+      {
+        "name": "Orchestration as Code",
+        "description": "Codify orchestration logic such as service deployments, scaling, and scheduling, commonly atop Kubernetes.",
+        "tools": ["Salt Project"],
+        "level": "emerging"
+      },
+      {
+        "name": "Jobs as Code",
+        "description": "Define background jobs or scheduled tasks using version-controlled configuration.",
+        "tools": [],
+        "level": "speculative"
+      },
+      {
+        "name": "Management as Code",
+        "description": "Codify operational workflows like user access management, escalation paths, or review procedures.",
+        "tools": [],
+        "level": "speculative"
+      }
+    ]
+  },
+  {
+    "category": "Application Design and Development",
+    "practices": [
+      {
+        "name": "Architecture as Code",
+        "description": "Use code to model system architecture and interfaces, enabling visualization and automated validation.",
+        "tools": ["Structurizr", "Archi"],
+        "level": "emerging"
+      },
+      {
+        "name": "Diagrams as Code",
+        "description": "Generate and manage diagrams (e.g., UML, infrastructure) using code and configuration.",
+        "tools": ["Mermaid", "Graphviz"],
+        "level": "emerging"
+      },
+      {
+        "name": "Docs as Code",
+        "description": "Write and maintain documentation using developer toolchains and treat it as version-controlled code.",
+        "tools": ["Markdown"],
+        "level": "emerging"
+      },
+      {
+        "name": "Project as Code",
+        "description": "Automate project scaffolding, dependency setup, and initialization via code templates.",
+        "tools": ["Yeoman"],
+        "level": "emerging"
+      },
+      {
+        "name": "Application Pipeline as Code",
+        "description": "Define automated pipelines for application build, test, and deployment using CI/CD tools.",
+        "tools": ["GitHub Actions", "GitLab CI", "Jenkins", "Argo CD"],
+        "level": "established"
+      },
+      {
+        "name": "Contracts as Code",
+        "description": "Codify service-level or legal agreements (e.g., SLAs, API contracts) for automated validation.",
+        "tools": ["OpenAPI", "Pact"],
+        "level": "speculative"
+      }
+    ]
+  },
+  {
+    "category": "Data and Database",
+    "practices": [
+      {
+        "name": "Data as Code",
+        "description": "Manage data flows, transformations, and processing logic through version-controlled code artifacts.",
+        "tools": ["DVC", "Airflow"],
+        "level": "emerging"
+      },
+      {
+        "name": "Database as Code",
+        "description": "Codify schema definitions, migrations, and database operations to ensure consistency and auditability.",
+        "tools": ["Liquibase", "Flyway", "Bytebase"],
+        "level": "emerging"
+      }
+    ]
+  },
+  {
+    "category": "Security and Compliance",
+    "practices": [
+      {
+        "name": "Security as Code",
+        "description": "Automate security practices (e.g., vulnerability scanning, static analysis) within development pipelines.",
+        "tools": ["Checkov", "Trivy", "Snyk", "SonarQube"],
+        "level": "established"
+      },
+      {
+        "name": "Detection as Code",
+        "description": "Codify rules for detecting misconfigurations, threats, or anomalies in real-time systems.",
+        "tools": ["Datadog"],
+        "level": "emerging"
+      },
+      {
+        "name": "IAM as Code",
+        "description": "Manage identity and access roles, permissions, and policies using code for consistency and traceability.",
+        "tools": ["HashiCorp Vault"],
+        "level": "emerging"
+      },
+      {
+        "name": "Privacy as Code",
+        "description": "Automate data privacy enforcement and policy checks (e.g., for GDPR or PII).",
+        "tools": [],
+        "level": "emerging"
+      },
+      {
+        "name": "Policy as Code",
+        "description": "Define and enforce governance, security, or compliance policies as executable rules.",
+        "tools": ["OPA", "Kyverno", "Sentinel"],
+        "level": "established"
+      },
+      {
+        "name": "Compliance as Code",
+        "description": "Automate regulatory control implementation, validation, and reporting using codified standards.",
+        "tools": ["OSCAL", "Trestle", "InSpec", "Auditree"],
+        "level": "established"
+      },
+      {
+        "name": "Law as Code",
+        "description": "Translate legal or regulatory text into machine-readable formats for traceability and automation.",
+        "tools": ["OSCAL (partial)"],
+        "level": "speculative"
+      }
+    ]
+  },
+  {
+    "category": "Observability and Analysis",
+    "practices": [
+      {
+        "name": "Monitoring as Code",
+        "description": "Codify observability configurations including metrics, logs, and alert rules.",
+        "tools": ["Datadog", "Zabbix", "Nagios"],
+        "level": "emerging"
+      },
+      {
+        "name": "Dashboards as Code",
+        "description": "Create and version dashboards declaratively to visualize system behavior.",
+        "tools": ["Grafana"],
+        "level": "emerging"
+      },
+      {
+        "name": "SLO as Code",
+        "description": "Codify service-level objectives to monitor and enforce reliability standards.",
+        "tools": ["OpenSLO"],
+        "level": "emerging"
+      },
+      {
+        "name": "Analytics as Code",
+        "description": "Automate analytics instrumentation and event tracking using codified definitions.",
+        "tools": ["Google Analytics"],
+        "level": "emerging"
+      }
+    ]
+  }
+]
