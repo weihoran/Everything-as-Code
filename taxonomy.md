@@ -1,10 +1,10 @@
-# 📘 Taxonomy of Everything as Code (EaC)
+# Taxonomy of Everything as Code (EaC)
 
 This taxonomy organizes "Everything as Code" (EaC) practices across functional domains of modern software delivery. Practices are classified as Established (🟥), Emerging (🟦), or Speculative (🟩), based on adoption, tool support, and presence in the literature.
 
 ---
 
-## 🏗️ Infrastructure Provisioning and Management  
+## Infrastructure Provisioning and Management  
 *Practices focused on declarative provisioning and configuration of compute, network, and storage.*
 
 - **Infrastructure as Code** 🟥  
@@ -29,7 +29,7 @@ This taxonomy organizes "Everything as Code" (EaC) practices across functional d
 
 ---
 
-## ⚙️ Platform and Orchestration  
+## Platform and Orchestration  
 *Codify orchestration of services, platform configuration, and environment management.*
 
 - **Platform as Code** 🟦  
@@ -54,7 +54,7 @@ This taxonomy organizes "Everything as Code" (EaC) practices across functional d
 
 ---
 
-## 🧱 Application Design and Development  
+## Application Design and Development  
 *Codify application logic, structure, and supporting development artifacts.*
 
 - **Architecture as Code** 🟦  
@@ -83,7 +83,7 @@ This taxonomy organizes "Everything as Code" (EaC) practices across functional d
 
 ---
 
-## 🧬 Data and Database  
+## Data and Database  
 *Manage data and database schema lifecycle using code-based artifacts.*
 
 - **Data as Code** 🟦  
@@ -96,7 +96,7 @@ This taxonomy organizes "Everything as Code" (EaC) practices across functional d
 
 ---
 
-## 🔐 Security and Compliance  
+## Security and Compliance  
 *Integrate security, policy enforcement, and regulatory validation through code.*
 
 - **Security as Code** 🟥  
@@ -129,7 +129,7 @@ This taxonomy organizes "Everything as Code" (EaC) practices across functional d
 
 ---
 
-## 📊 Observability and Analysis  
+## Observability and Analysis  
 *Code-driven approaches to monitoring, alerting, performance metrics, and business insights.*
 
 - **Monitoring as Code** 🟦  
