@@ -1,144 +1,156 @@
 # 📘 Taxonomy of Everything as Code (EaC)
 
-This taxonomy organizes "Everything as Code" (EaC) practices across functional domains of cloud-native software delivery, based on their roles in modern DevOps pipelines and their maturity in the industry. Practices are further classified as Established (🟥), Emerging (🟦), or Speculative (🟩) based on frequency of literature references, tooling support, and adoption levels.
+This taxonomy organizes "Everything as Code" (EaC) practices across functional domains of modern software delivery. Practices are classified as Established (🟥), Emerging (🟦), or Speculative (🟩), based on adoption, tool support, and presence in the literature.
 
 ---
 
-## 🧭 Legend  
-- 🟥 **Established Practices** — Commonly adopted, well-documented, and broadly supported by tools  
-- 🟦 **Emerging Practices** — Increasingly adopted, partially supported, and documented in industry sources  
-- 🟩 **Speculative Practices** — Low adoption and limited documentation; tracked in supplementary material
-
 ## 🏗️ Infrastructure Provisioning and Management  
-*Practices focused on the declarative provisioning and post-provision configuration of foundational infrastructure components, such as compute, storage, and network resources.*
+*Practices focused on declarative provisioning and configuration of compute, network, and storage.*
 
 - **Infrastructure as Code** 🟥  
-  Declaratively provision and manage infrastructure components like virtual machines, containers, and load balancers using code that is version-controlled and repeatable.  
+  Declarative provisioning and management of cloud and on-prem infrastructure components.  
   *Tools:* Terraform, Pulumi, CloudFormation, Ansible, Chef, Puppet  
 
 - **Configuration as Code** 🟥  
-  Automate the configuration of operating systems, middleware, and application settings after infrastructure provisioning. Supports dynamic and environment-specific configuration.  
+  Post-provision configuration of OS, middleware, and app settings.  
   *Tools:* Ansible, Chef, Puppet, SaltStack, Helm  
 
 - **Storage as Code** 🟦  
-  Allocate and configure block, object, or file-based storage using code interfaces, enabling consistent resource setup across environments.  
+  Code-based provisioning and configuration of storage layers (e.g., block, object).  
   *Tools:* Ceph  
 
 - **Network as Code** 🟦  
-  Define and manage virtual networks, routing rules, and security groups declaratively using code-driven automation.  
+  Codified management of virtual and physical networking configurations.  
   *Tools:* Netmiko  
 
 - **(Infra) Pipeline as Code** 🟥  
-  Automate the end-to-end lifecycle of infrastructure delivery through code-defined workflows, integrating provisioning, validation, and remediation steps.  
-  *Tools:* Jenkins, GitLab CI, Terraform pipelines  
+  Codified workflows for infrastructure deployment and validation.  
+  *Tools:* Terraform CI/CD integrations  
 
 ---
 
 ## ⚙️ Platform and Orchestration  
-*Practices that define and manage platform-level capabilities and runtime orchestration, including service coordination, cluster setups, and environment templates.*
+*Codify orchestration of services, platform configuration, and environment management.*
 
 - **Platform as Code** 🟦  
-  Codify entire application platforms, including runtimes, databases, and middleware, to standardize and replicate environments across teams or deployments.  
+  Code-defined full platform environments, including runtimes, services, and control planes.  
   *Tools:* Crossplane  
 
 - **Environments as Code** 🟦  
-  Codify and manage multi-stage environments (e.g., development, staging, production), including dependencies, secrets, and resource allocations.  
+  Codify setup of dev/stage/prod environments including variables and secrets.  
   *Tools:* Terraform, Ansible  
 
 - **Orchestration as Code** 🟦  
-  Define how services are orchestrated at runtime, including scheduling, scaling, and service discovery—often atop Kubernetes or similar systems.  
+  Define service orchestration logic (e.g., deployments, rollouts, autoscaling).  
   *Tools:* Salt Project  
 
 - **Jobs as Code** 🟩  
-  Codify the definition, scheduling, and execution logic of batch jobs and background processing tasks.  
-  *Tools:* Custom GitOps tools (inferred)
+  Define background or scheduled task logic in reusable job configuration.  
+  *Tools:* (Inferred from CI/CD and cloud schedulers)  
+
+- **Management as Code** 🟩  
+  Codify organizational or operational management workflows, such as access reviews or escalation paths.  
+  *Tools:* Limited; conceptual only  
 
 ---
 
 ## 🧱 Application Design and Development  
-*Practices aimed at codifying the structure, lifecycle, and supporting artifacts for application-level development and documentation.*
+*Codify application logic, structure, and supporting development artifacts.*
 
 - **Architecture as Code** 🟦  
-  Use code to model system architecture, including components, interfaces, and dependencies. Facilitates automated architecture validation and visualization.  
+  Express system architecture models in structured, versioned code.  
   *Tools:* Structurizr, Archi  
 
 - **Diagrams as Code** 🟦  
-  Generate visual diagrams (e.g., flowcharts, infrastructure topologies) programmatically from source code or configuration files.  
-  *Tools:* Graphviz, Mermaid  
+  Use code to generate and manage diagrams like UML, infrastructure charts.  
+  *Tools:* Mermaid, Graphviz  
 
 - **Docs as Code** 🟦  
-  Treat software documentation as code by writing it in plaintext markup, storing it in version control, and integrating it into CI/CD pipelines.  
+  Manage software and API documentation using dev toolchains and markdown-based pipelines.  
   *Tools:* Markdown  
 
 - **Project as Code** 🟦  
-  Automate project scaffolding, dependency setup, and boilerplate generation using reusable code templates.  
+  Automate project scaffolding and lifecycle operations through reusable templates.  
   *Tools:* Yeoman  
 
 - **(App) Pipeline as Code** 🟥  
-  Define the build, test, and deployment workflow for applications using declarative or scriptable CI/CD pipelines.  
-  *Tools:* Jenkins, GitHub Actions, CircleCI, Argo CD  
+  Define CI/CD stages for application code builds, tests, and deployments.  
+  *Tools:* GitHub Actions, GitLab CI, Jenkins, Argo CD  
+
+- **Contracts as Code** 🟩  
+  Codify service-level or business contracts (e.g., APIs, SLAs) for automated validation and enforcement.  
+  *Tools:* Conceptual, some links to OpenAPI, Pact  
 
 ---
 
 ## 🧬 Data and Database  
-*Practices that codify the structure, flow, and versioning of data and database systems to ensure consistent data handling.*
+*Manage data and database schema lifecycle using code-based artifacts.*
 
 - **Data as Code** 🟦  
-  Version control data transformations, pipelines, and processing tasks as code to ensure repeatable and auditable data workflows.  
-  *Tools:* DVC, Apache Airflow  
+  Define data processing logic, transformations, and flows as version-controlled code.  
+  *Tools:* DVC, Airflow  
 
 - **Database as Code** 🟦  
-  Manage schema evolution, migrations, and database configurations through version-controlled code.  
-  *Tools:* Liquibase, Bytebase, Flyway  
+  Codify schema migrations, seed data, and deployment policies for databases.  
+  *Tools:* Liquibase, Flyway, Bytebase  
 
 ---
 
 ## 🔐 Security and Compliance  
-*Practices embedding security and regulatory checks into automated pipelines, ensuring policy conformance and risk mitigation.*
+*Integrate security, policy enforcement, and regulatory validation through code.*
 
 - **Security as Code** 🟥  
-  Shift security left by embedding vulnerability scans, static analysis, and threat detection into development pipelines using codified rules.  
-  *Tools:* Checkov, Trivy, Snyk, SonarQube, Gauntlt  
+  Automate static/dynamic analysis, vulnerability scanning, and threat detection via code.  
+  *Tools:* Checkov, Trivy, Snyk, SonarQube  
 
 - **Detection as Code** 🟦  
-  Define detection logic (e.g., for threats, anomalies, misconfigurations) as version-controlled code integrated into monitoring pipelines.  
+  Codify security incident detection rules integrated into monitoring platforms.  
   *Tools:* Datadog  
 
 - **IAM as Code** 🟦  
-  Codify roles, permissions, and identity management policies to ensure consistent and auditable access control.  
+  Define identity and access control policies declaratively.  
   *Tools:* HashiCorp Vault  
 
 - **Privacy as Code** 🟦  
-  Automate checks for data privacy compliance, such as PII detection or GDPR adherence, using code-defined rules.  
-  *Tools:* N/A  
+  Automate privacy compliance checks (e.g., PII detection, data anonymization).  
+  *Tools:* Conceptual  
 
 - **Policy as Code** 🟥  
-  Codify organizational, compliance, or security policies as executable rules enforced at deploy-time or runtime.  
-  *Tools:* Open Policy Agent (OPA), Kyverno, Sentinel  
+  Define rules and constraints for infrastructure or application behavior.  
+  *Tools:* OPA, Kyverno, Sentinel  
 
 - **Compliance as Code** 🟥  
-  Define, assess, and report on regulatory control implementations (e.g., NIST, ISO) using machine-readable artifacts.  
+  Automate regulatory documentation, validation, and audit processes.  
   *Tools:* OSCAL, Trestle, InSpec, Auditree  
+
+- **Law as Code** 🟩  
+  Translate legal/regulatory texts into machine-readable, executable rules.  
+  *Tools:* OSCAL (partial), others conceptual  
 
 ---
 
 ## 📊 Observability and Analysis  
-*Practices enabling proactive system health monitoring and business insights through code-driven instrumentation.*
+*Code-driven approaches to monitoring, alerting, performance metrics, and business insights.*
 
 - **Monitoring as Code** 🟦  
-  Define system observability components—metrics, logs, alerts—as code to ensure repeatable and consistent monitoring setups.  
+  Codify metrics, logs, and alerting rules to ensure observability consistency.  
   *Tools:* Datadog, Zabbix, Nagios  
 
 - **Dashboards as Code** 🟦  
-  Generate and version visual dashboards programmatically to reflect evolving metrics and operational data.  
+  Generate and manage metrics dashboards declaratively.  
   *Tools:* Grafana  
 
 - **SLO as Code** 🟦  
-  Declare and monitor service-level objectives using code to enforce reliability targets across systems.  
+  Codify service-level objectives to monitor reliability and performance guarantees.  
   *Tools:* OpenSLO  
 
 - **Analytics as Code** 🟦  
-  Automate user behavior tracking, funnel analysis, and reporting logic through codified analytics configurations.  
+  Define analytics tracking logic for events, funnels, and usage patterns via code.  
   *Tools:* Google Analytics  
 
 ---
+
+## 🧭 Legend  
+- 🟥 **Established Practices** — Common, well-supported, and documented  
+- 🟦 **Emerging Practices** — Gaining traction, partial tooling support  
+- 🟩 **Speculative Practices** — Limited documentation, conceptual, tracked in supplementary material
