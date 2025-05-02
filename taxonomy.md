@@ -150,7 +150,7 @@ This taxonomy organizes "Everything as Code" (EaC) practices across functional d
 
 ---
 
-## 🧭 Legend  
+## Legend  
 - 🟥 **Established Practices** — Common, well-supported, and documented  
 - 🟦 **Emerging Practices** — Gaining traction, partial tooling support  
 - 🟩 **Speculative Practices** — Limited documentation, conceptual, tracked in supplementary material
