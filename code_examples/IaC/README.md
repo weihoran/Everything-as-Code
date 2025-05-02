@@ -1,6 +1,6 @@
-# Module classic_kubernetes_single_zone_cluster
+# IaC Example
 
-This module is used to provision an IKS cluster on IBM Cloud Infrastructure with single zone attached - classic.
+This module is used to provision a Kubernetes cluster on IBM Cloud Infrastructure with single zone attached - classic.
 
 ## Example Usage
 ```
