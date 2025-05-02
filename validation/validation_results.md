@@ -25,7 +25,7 @@
 | **C11**   | Terminological Precision              |       3 |           0 |     0 |             100%   |
 | **C12**   | Rationale Behind Categories           |       3 |           0 |     0 |             100%   |
 
-## Key Comments, Refinements, and Limitations
+## Key Comments, Discussions, Refinements, and Limitations
 ### Taxonomy
 
 1. **C3: Scope and Completeness (83 % agreement)**
