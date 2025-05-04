@@ -1,0 +1,11 @@
+```yaml
+---
+plugin: ansible.builtin.constructed
+hosts:
+  k8s_nodes:
+    hosts: "{{ node_ips }}"
+compose:
+  ansible_host: "{{ inventory_hostname }}"
+vars:
+  node_ips: "{{ (lookup('file', 'terraform_output.json') | from_json).node_ips.value }}"
+```

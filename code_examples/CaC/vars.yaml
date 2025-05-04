@@ -1,0 +1,4 @@
+```yaml
+---
+datadog_api_key: "{{ lookup('env', 'DATADOG_API_KEY') | default('your-datadog-api-key', true) }}"
+```

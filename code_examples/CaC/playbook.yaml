@@ -1,0 +1,20 @@
+```yaml
+---
+- name: Install Datadog host agent on EKS worker nodes
+  hosts: k8s_nodes
+  become: yes
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Check if Datadog agent is installed
+      stat:
+        path: /opt/datadog-agent/bin/agent
+      register: datadog_stat
+
+    - name: Install Datadog host agent
+      shell: |
+        DD_API_KEY={{ datadog_api_key }} bash -c "$(curl -L https://raw.githubusercontent.com/DataDog/datadog-agent/master/cmd/agent/install_script.sh)"
+      when: not datadog_stat.stat.exists
+      environment:
+        DD_API_KEY: "{{ datadog_api_key }}"
+```
