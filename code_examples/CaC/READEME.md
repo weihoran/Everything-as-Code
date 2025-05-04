@@ -4,11 +4,6 @@ This Ansible playbook automates the installation of the Datadog host agent on Ku
 
 This task uses Ansible because it involves **node-level configuration**, which Helm (Kubernetes-only) and Terraform (infrastructure-focused) cannot efficiently handle. The Datadog Kubernetes components (e.g., Cluster Agent) should be deployed separately via Helm.
 
-## Supported Platforms
-- **AWS EKS**: Nodes typically run Amazon Linux 2/2023.
-- **IBM Kubernetes Service (IKS)**: Nodes typically run Ubuntu or RHEL.
-- **Azure AKS**: Nodes typically run Ubuntu or Azure Linux.
-
 ## Files
 - **`inventory.yml`**: Defines a dynamic inventory using Terraform outputs (e.g., `terraform_output.json`) to target worker nodes. Supports different JSON paths for EKS, IKS, and AKS.
 - **`playbook.yml`**: Installs the Datadog host agent, ensuring dependencies (e.g., `curl`) are present for Debian and RPM-based systems.
