@@ -1,0 +1,13 @@
+```rego
+package terraform
+
+import input as tfplan
+
+# Deny EKS clusters with public endpoint enabled
+deny[msg] {
+    resource := tfplan.resource_changes[_]
+    resource.type == "aws_eks_cluster"
+    resource.change.after.endpoint_public_access == true
+    msg := sprintf("EKS cluster '%s' has public endpoint enabled, which is insecure.", [resource.name])
+}
+```

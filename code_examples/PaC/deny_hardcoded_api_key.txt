@@ -1,0 +1,13 @@
+```rego
+package ansible
+
+import input as ansible_vars
+
+# Deny hard-coded Datadog API key in vars.yml
+deny[msg] {
+    ansible_vars.datadog_api_key
+    not startswith(ansible_vars.datadog_api_key, "{{ lookup('env',")
+    not startswith(ansible_vars.datadog_api_key, "{{ lookup('vault',")
+    msg := "Datadog API key in vars.yml is hard-coded; use environment variables or Ansible Vault."
+}
+```

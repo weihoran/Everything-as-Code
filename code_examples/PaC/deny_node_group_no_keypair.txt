@@ -1,0 +1,13 @@
+```rego
+package terraform
+
+import input as tfplan
+
+# Deny node groups without a key pair
+deny[msg] {
+    resource := tfplan.resource_changes[_]
+    resource.type == "aws_eks_node_group"
+    not resource.change.after.remote_access.key_name
+    msg := sprintf("EKS node group '%s' lacks a key pair for SSH access.", [resource.name])
+}
+```

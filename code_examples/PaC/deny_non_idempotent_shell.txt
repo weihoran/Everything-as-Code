@@ -1,0 +1,20 @@
+```rego
+package ansible
+
+import input as playbook
+
+# Deny shell tasks without idempotency checks
+deny[msg] {
+    task := playbook.tasks[_]
+    task.shell
+    contains(task.shell, "curl")
+    not has_stat_task(playbook.tasks)
+    msg := "Shell task downloading script lacks idempotency check (e.g., stat task)."
+}
+
+# Check for a stat task
+has_stat_task(tasks) {
+    some task in tasks
+    task.stat
+}
+```

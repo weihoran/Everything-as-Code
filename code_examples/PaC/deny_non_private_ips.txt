@@ -1,0 +1,26 @@
+```rego
+package ansible
+
+import input as inventory
+
+# Deny inventory with non-private IPs
+deny[msg] {
+    host := inventory.hosts.k8s_nodes.hosts[_]
+    not is_private_ip(host)
+    msg := sprintf("Inventory includes non-private IP '%s' for k8s_nodes.", [host])
+}
+
+# Check if IP is private (RFC 1918)
+is_private_ip(ip) {
+    startswith(ip, "10.")
+} {
+    startswith(ip, "172.16.") or startswith(ip, "172.17.") or startswith(ip, "172.18.") or
+    startswith(ip, "172.19.") or startswith(ip, "172.20.") or startswith(ip, "172.21.") or
+    startswith(ip, "172.22.") or startswith(ip, "172.23.") or startswith(ip, "172.24.") or
+    startswith(ip, "172.25.") or startswith(ip, "172.26.") or startswith(ip, "172.27.") or
+    startswith(ip, "172.28.") or startswith(ip, "172.29.") or startswith(ip, "172.30.") or
+    startswith(ip, "172.31.")
+} {
+    startswith(ip, "192.168.")
+}
+```

@@ -1,0 +1,13 @@
+```rego
+package terraform
+
+import input as tfplan
+
+# Deny non-sensitive outputs containing node IPs
+deny[msg] {
+    output := tfplan.outputs[_]
+    contains(output.name, "node_ips")
+    output.sensitive != true
+    msg := sprintf("Output '%s' containing node IPs is not marked sensitive.", [output.name])
+}
+```
