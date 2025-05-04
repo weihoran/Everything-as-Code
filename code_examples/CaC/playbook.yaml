@@ -1,11 +1,25 @@
 ```yaml
 ---
-- name: Install Datadog host agent on EKS worker nodes
+- name: Install Datadog host agent on Kubernetes worker nodes
   hosts: k8s_nodes
   become: yes
   vars_files:
     - vars.yml
   tasks:
+    - name: Install curl on Debian-based systems
+      apt:
+        name: curl
+        state: present
+        update_cache: yes
+      when: ansible_os_family == "Debian"
+
+    - name: Install curl on RPM-based systems
+      yum:
+        name: curl
+        state: present
+        update_cache: yes
+      when: ansible_os_family == "RedHat"
+
     - name: Check if Datadog agent is installed
       stat:
         path: /opt/datadog-agent/bin/agent
