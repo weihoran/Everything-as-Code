@@ -7,5 +7,7 @@ hosts:
 compose:
   ansible_host: "{{ inventory_hostname }}"
 vars:
-  node_ips: "{{ (lookup('file', 'terraform_output.json') | from_json).node_ips.value }}"
+  terraform_output: "{{ lookup('file', 'terraform_output.json') | from_json }}"
+  node_ips: "{{ terraform_output[terraform_output_key].value }}"
+  terraform_output_key: "{{ lookup('env', 'TERRAFORM_OUTPUT_KEY') | default('node_ips', true) }}"
 ```
