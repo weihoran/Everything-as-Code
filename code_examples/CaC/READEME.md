@@ -1,7 +1,5 @@
+## CaC (Ansible Playbook) for Datadog Host Agent Configuration on Kubernetes Nodes
 
-# CaC (Ansible Playbook) for Datadog Host Agent Configuration on Kubernetes Nodes
-
-## Overview
 This Ansible playbook automates the installation of the Datadog host agent on Kubernetes worker nodes to collect OS-level metrics (e.g., CPU, memory, disk). It is designed to work with managed Kubernetes clusters like AWS EKS, IBM Kubernetes Service (IKS), or Azure AKS, using cluster information (e.g., node IPs) from Terraform outputs. The playbook is idempotent and supports different node operating systems (e.g., Amazon Linux, Ubuntu).
 
 This task uses Ansible because it involves **node-level configuration**, which Helm (Kubernetes-only) and Terraform (infrastructure-focused) cannot efficiently handle. The Datadog Kubernetes components (e.g., Cluster Agent) should be deployed separately via Helm.
