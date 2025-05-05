@@ -1,0 +1,182 @@
+```json
+{
+  "component-definition": {
+    "uuid": "a7f8c6b2-9e3f-4f6d-b1e8-3f2c7a9d0e1c",
+    "metadata": {
+      "title": "Rego Policy Enforcement System for Terraform and Ansible",
+      "last-modified": "2025-05-04T12:00:00Z",
+      "version": "1.0.0",
+      "oscal-version": "1.1.2",
+      "parties": [
+        {
+          "uuid": "b1c2d3e4-5f6a-7b8c-9d0e-1f2a3b4c5d6e",
+          "type": "organization",
+          "name": "DevOps Team"
+        }
+      ]
+    },
+    "components": [
+      {
+        "uuid": "c3d4e5f6-6a7b-8c9d-0e1f-2a3b4c5d6e7f",
+        "type": "software",
+        "title": "Rego Policy Enforcement System",
+        "description": "A system using Open Policy Agent (OPA) and Conftest to enforce security and compliance policies on Terraform and Ansible scripts for provisioning an EKS cluster and configuring nodes with the Datadog host agent.",
+        "responsible-roles": [
+          {
+            "role-id": "maintainer",
+            "party-uuids": ["b1c2d3e4-5f6a-7b8c-9d0e-1f2a3b4c5d6e"]
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "d4e5f6a7-7b8c-9d0e-1f2a-3b4c5d6e7f8a",
+            "source": "NIST_SP_800-53_rev5",
+            "description": "Implementation of NIST SP 800-53 controls using Rego policies for Terraform and Ansible validation.",
+            "implemented-requirements": [
+              {
+                "uuid": "e5f6a7b8-8c9d-0e1f-2a3b-4c5d6e7f8a9b",
+                "control-id": "SC-7",
+                "description": "Ensures EKS clusters disable public endpoint access to prevent unauthorized access.",
+                "props": [
+                  {
+                    "name": "policy_file",
+                    "value": "deny_public_eks_endpoint.rego"
+                  }
+                ],
+                "statements": [
+                  {
+                    "uuid": "f6a7b8c9-9d0e-1f2a-3b4c-5d6e7f8a9b0c",
+                    "description": "The Rego policy deny_public_eks_endpoint.rego validates Terraform plans to ensure aws_eks_cluster resources have endpoint_public_access set to false."
+                  }
+                ]
+              },
+              {
+                "uuid": "a7b8c9d0-0e1f-2a3b-4c5d-6e7f8a9b0c1d",
+                "control-id": "IA-2",
+                "description": "Requires EKS node groups to use SSH key pairs for secure Ansible access.",
+                "props": [
+                  {
+                    "name": "policy_file",
+                    "value": "deny_node_group_no_keypair.rego"
+                  }
+                ],
+                "statements": [
+                  {
+                    "uuid": "b8c9d0e1-1f2a-3b4c-5d6e-7f8a9b0c1d2e",
+                    "description": "The Rego policy deny_node_group_no_keypair.rego ensures aws_eks_node_group resources specify a remote_access.key_name for SSH access."
+                  }
+                ]
+              },
+              {
+                "uuid": "c9d0e1f2-2a3b-4c5d-6e7f-8a9b0c1d2e3f",
+                "control-id": "SC-8",
+                "description": "Ensures Terraform outputs containing node IPs are marked as sensitive to protect infrastructure details.",
+                "props": [
+                  {
+                    "name": "policy_file",
+                    "value": "deny_non_sensitive_outputs.rego"
+                  }
+                ],
+                "statements": [
+                  {
+                    "uuid": "d0e1f2a3-3b4c-5d6e-7f8a-9b0c1d2e3f4a",
+                    "description": "The Rego policy deny_non_sensitive_outputs.rego validates Terraform outputs named 'node_ips' to ensure they are marked sensitive."
+                  }
+                ]
+              },
+              {
+                "uuid": "e1f2a3b4-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+                "control-id": "CM-7",
+                "description": "Prevents hard-coded Datadog API keys in Ansible variables, requiring secure sourcing.",
+                "props": [
+                  {
+                    "name": "policy_file",
+                    "value": "deny_hardcoded_api_key.rego"
+                  }
+                ],
+                "statements": [
+                  {
+                    "uuid": "f2a3b4c5-5d6e-7f8a-9b0c-1d2e3f4a5b6c",
+                    "description": "The Rego policy deny_hardcoded_api_key.rego ensures the datadog_api_key in vars.yml uses a secure lookup (e.g., environment variables or Ansible Vault)."
+                  }
+                ]
+              },
+              {
+                "uuid": "a3b4c5d6-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+                "control-id": "CM-6",
+                "description": "Ensures Ansible shell tasks for Datadog installation are idempotent to prevent configuration drift.",
+                "props": [
+                  {
+                    "name": "policy_file",
+                    "value": "deny_non_idempotent_shell.rego"
+                  }
+                ],
+                "statements": [
+                  {
+                    "uuid": "b4c5d6e7-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+                    "description": "The Rego policy deny_non_idempotent_shell.rego validates Ansible playbooks to ensure shell tasks downloading scripts include a stat task for idempotency."
+                  }
+                ]
+              },
+              {
+                "uuid": "c5d6e7f8-8a9b-0c1d-2e3f-4a5b6c7d8e9f",
+                "control-id": "SC-7",
+                "description": "Ensures Ansible inventory only includes private IPs for EKS nodes to restrict access.",
+                "props": [
+                  {
+                    "name": "policy_file",
+                    "value": "deny_non_private_ips.rego"
+                  }
+                ],
+                "statements": [
+                  {
+                    "uuid": "d6e7f8a9-9b0c-1d2e-3f4a-5b6c7d8e9f0a",
+                    "description": "The Rego policy deny_non_private_ips.rego validates Ansible inventory to ensure k8s_nodes hosts use private IPs per RFC 1918."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": [
+      {
+        "resources": [
+          {
+            "uuid": "e7f8a9b0-0c1d-2e3f-4a5b-6c7d8e9f0a1b",
+            "title": "Rego Policy Files",
+            "description": "Rego policy files for Terraform and Ansible validation.",
+            "rlinks": [
+              {
+                "href": "policy/deny_public_eks_endpoint.rego",
+                "media-type": "text/rego"
+              },
+              {
+                "href": "policy/deny_node_group_no_keypair.rego",
+                "media-type": "text/rego"
+              },
+              {
+                "href": "policy/deny_non_sensitive_outputs.rego",
+                "media-type": "text/rego"
+              },
+              {
+                "href": "policy/deny_hardcoded_api_key.rego",
+                "media-type": "text/rego"
+              },
+              {
+                "href": "policy/deny_non_idempotent_shell.rego",
+                "media-type": "text/rego"
+              },
+              {
+                "href": "policy/deny_non_private_ips.rego",
+                "media-type": "text/rego"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
