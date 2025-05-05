@@ -1,0 +1,80 @@
+```yaml
+name: Policy and Security Checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  policy-security:
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      # Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Install Checkov
+      - name: Install Checkov
+        run: |
+          pip install checkov
+
+      # Install Ansible-lint
+      - name: Install Ansible-lint
+        run: |
+          pip install ansible-lint
+
+      # Install Conftest
+      - name: Install Conftest
+        run: |
+          curl -L https://github.com/open-policy-agent/conftest/releases/download/v0.42.0/conftest_0.42.0_Linux_x86_64.tar.gz | tar xz
+          sudo mv conftest /usr/local/bin/
+
+      # Install Terraform
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.5.7
+
+      # Scan Terraform with Checkov
+      - name: Scan Terraform with Checkov
+        run: |
+          checkov -d . --framework terraform --output github_failed_only
+        env:
+          CHECKOV_SKIP_CHECK: CKV_AWS_999 # Skip specific checks if needed
+
+      # Scan Ansible with Ansible-lint
+      - name: Scan Ansible with Ansible-lint
+        run: |
+          ansible-lint playbook.yml --exclude vars.yml
+        continue-on-error: true
+
+      # Generate Terraform plan for Rego validation
+      - name: Generate Terraform plan
+        run: |
+          terraform init
+          terraform plan -out=tfplan
+          terraform show -json tfplan > tfplan.json
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      # Validate Rego policies
+      - name: Validate Rego policies
+        run: |
+          conftest test tfplan.json playbook.yml vars.yml -p policy/
+
+      # Check for critical vulnerabilities
+      - name: Check for critical vulnerabilities
+        run: |
+          checkov -d . --framework terraform --output json > checkov_report.json
+          CRITICAL_COUNT=$(jq '.results.failed_checks[] | select(.check_result.severity == "HIGH")' checkov_report.json | wc -l)
+          if [ "$CRITICAL_COUNT" -gt 0 ]; then
+            echo "Critical vulnerabilities found. Failing the build."
+            exit 1
+          fi
+```
