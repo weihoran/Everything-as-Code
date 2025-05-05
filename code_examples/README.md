@@ -1,5 +1,5 @@
 
-# Example As-Code Artifacts that demonstrate the implementation of the EaC Conceptual Model
+# Example As-Code Artifacts Demonstrating the Implementation of our EaC Conceptual Model
 
 ## Overview
 This project demonstrates the provisioning of a Kubernetes cluster and configuration of nodes with the Datadog host agent using a **DevSecOps pipeline**. It integrates **Infrastructure as Code (IaC)**, **Configuration as Code (CaC)**, **Security as Code (SaC)**, **Policy as Code (PaC)**, **Compliance as Code (CoaC)**, and **Pipeline as Code (PiaC)** to ensure a secure, compliant deployment. The pipeline executes as a single run, validating, scanning, enforcing policies, and deploying artifacts, with NIST SP 800-53 compliance documented via OSCAL.
