@@ -1,0 +1,35 @@
+```yaml
+name: Checkov Vulnerability Scan
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  checkov-scan:
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Checkov
+        run: |
+          pip install checkov
+      - name: Scan Terraform with Checkov
+        run: |
+          checkov -d . --framework terraform --output github_failed_only
+        env:
+          CHECKOV_SKIP_CHECK: CKV_AWS_999 # Skip specific checks if needed
+      - name: Check for critical vulnerabilities
+        run: |
+          checkov -d . --framework terraform --output json > checkov_report.json
+          CRITICAL_COUNT=$(jq '.results.failed_checks[] | select(.check_result.severity == "HIGH")' checkov_report.json | wc -l)
+          if [ "$CRITICAL_COUNT" -gt 0 ]; then
+            echo "Critical vulnerabilities found. Failing the build."
+            exit 1
+          fi
+```
